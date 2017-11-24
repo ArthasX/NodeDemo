@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='stylesheets/style.css')
+    body
+        #content
+            #room
+            #room-list
+            #messages
+            form#send-form
+                input#send-message
+                input#send-button(type='submit',value='send')
+                #help
+                    span Chat commands1:
+                    ul
+                        li Change nickname:
+                            code /nick [username]
+                        li Join/create room:
+                            code /join [room name]
+        script(src="http://code.jquery.com/jquery-1.8.0.min.js" type="text/javascript")
+        script(src="/socket.io/socket.io.js" type="text/javascript")
+        script(src="javascripts/chat.js" type="text/javascript")
+        script(src="javascripts/chat_ui.js" type="text/javascript")
